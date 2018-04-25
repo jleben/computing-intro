@@ -6,12 +6,33 @@ Concepts are listed in recommended order of introduction. Later concepts depend 
 
 Unless otherwise noted, examples are in Python language.
 
-## Expression, value
+## Instruction (Command) and Sequencing
+
+Languages like Scratch have a concept of instructions/commands with parameters that have external effects - draw something or change appearance of something already on screen, play a sound. This concept can be understood without introducing expressions, operators, types, functions.
+
+In textual languages like Python, this concept corresponds to effectful functions, like `print`. Unfortunately, usually very few such functions are immediately available.
+
+Processing.org is one exceptions, with a lot of readily available drawing functions.
+
+Exercises:
+
+- Modify instruction parameters.
+- Copy and paste instructions.
+- Add instructions.
+
+Many Hour of Code exercise don't go beyond this.
+
+## Expression, Value
+
+NOTE: To make expressions really useful, one needs non-constants, e.g. program input or variables, ...
 
     1
     1 + 2
     "Hi!"
     "Hi " + "Alice!"
+
+Exercise: Modify expressions
+Exercise: Compose expressions
 
 ## Type
 
@@ -19,23 +40,33 @@ Type error:
 
     "Hi " + 2
 
-## Function
+## Function, Method
+
+Parameters (arguments), return value:
 
     "Hi " + str(2)
+
+    "Alice".lower()
+
+Effect:
 
     print("something")
 
     print("Hi: " + input("Enter your name:"))
 
-## Method
+Exercise: Modify arguments to functions.
+Exercise: Add function calls.
 
-    "Alice".lower()
+## Event
 
-## Sequencing
+Essence: executing code when something external happens.
 
-    print("one")
-    print("two")
-    print("three")
+Events are mentioned as fundamental concept in Google's hour of code activity:
+g.co/csfirst/logo
+
+Events are part of Scratch (e.g. when mouse is clicked or key is pressed).
+
+In Python, using `input` is a response to events.
 
 ## Repetition
 
@@ -55,7 +86,30 @@ In C, we need to explicitly update a state:
 
 ## Variable
 
-Defining, updating, using, ...
+Variable, its value, ...
+Defining and updating (assignment), using, ...
+
+http://code.globaloria.com/
+"Variables control many things at once."
+
+https://www.khanacademy.org/computing/computer-programming/programming/variables/p/intro-to-variables
+"Variable is a *name* or a *placeholder* for something else. A big *bucket* with a name on it..."
+Read `x = 1` as "x *gets* 1"
+
+Variables can be introduced usefully before expressions, operators, for example in Processing:
+
+    size = 50;
+    ellipse(100, 100, size, size);
+
+... and expressions added later, based on variables:
+
+    x = 50;
+    ellipse(x, 50, 100, 100)
+    ellipse(x + 20, 60, 60)
+
+Exercise: Modify a variable used in multiple places.
+Exercise: Use a variable in expressions.
+Exercise: Define new variable. (How to justify?)
 
 ## Collection
 
